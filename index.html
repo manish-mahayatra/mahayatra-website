@@ -5,17 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tourest - Explore the World</title>
+  <title>MahaYatra - Explore the World with us</title>
+  <meta name="description" content="Discover unparalleled travel experiences with Maha Yatra. Explore our curated itineraries for mesmerizing destinations worldwide. From cultural immersions to thrilling adventures, our expertly crafted tours promise unforgettable moments. Book now for a seamless blend of luxury, sustainability, and personalized service.">
+
+  
+  <meta name="keywords" content="travel,Tourism,Vacation,Adventure,Explore,Holiday,Wanderlust,Destination,Trip,Tour,Travel Guide,Adventure Tours,Luxury Travel,Cultural Experience,Budget Travel,Backpacking,Family Vacation,Solo Travel,Group Tours,Sustainable Tourism,Eco-Friendly Travel,Off the Beaten Path,Exotic Destinations,Beach Getaway,City Break,Hiking Trails,Wildlife Safari,Historical Sites,Wellness Retreat,Cruise,Mountain Retreat,Food and Travel,Scenic Drives,Travel Tips,Travel Essentials,Travel Planning,Adventure Activities,Cultural Heritage,Travel Photography,Travel Deals,All-Inclusive Resorts,Hidden Gems,Local Experiences,Romantic Getaway,Sustainable Accommodations,Travel Safety,Visa Information,Travel Insurance,Digital Nomad Destinations,Weekend Getaways">
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="/assets/images/main-logo2.png" type="image/svg+xml">
 
   <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- 
     - google font link
@@ -26,643 +32,472 @@
     href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
+
+  <style>
+    @font-face {
+      font-family: rupture;
+      src: url('/assets/fonts/Rupture\ Script\ DEMO.ttf');
+    }
+
+    @font-face {
+      font-family: blankit;
+      src: url('/assets/fonts/Blankit.ttf');
+    }
+  </style>
+
+
+
 </head>
 
-<body id="top">
+<body>
 
-  <!-- 
-    - #HEADER
-  -->
+  <section class="h-full" id="home"
+    style="background-image: url('/assets/images/hero-back.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
 
-  <header class="header" data-header>
+    <nav class="fixed px-8 w-full z-20 top-0 start-0 shadow-lg" style="background-color: white">
+      <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/assets/images/main-logo2.png" class="h-20 sm:h-40" alt="Flowbite Logo">
+          <!-- <span class="my-3 self-center text-6xl font-semibold whitespace-nowrap text-white" style="font-family: rupture;">MahaYatra</span> -->
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <a href="#contact" class="text-white font-large rounded-xl text-4xl pt-4 pb-3 px-3 text-center cursor-pointer"
+            style="background-color: #FAA710;">Contact
+            Us</a>
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-16 h-14 justify-center text-lg text-gray-500 rounded-lg md:hidden"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+            <li>
+              <a href="#home" class="block py-4 px-3 text-4xl rounded md:bg-transparent md:p-0"
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="#destination" class="block py-4 px-3 text-4xl rounded md:bg-transparent md:p-0">Destination</a>
+            </li>
+            <li>
+              <a href="#packages" class="block py-4 px-3 text-4xl rounded md:bg-transparent md:p-0">Packages</a>
+            </li>
+            <li>
+              <a href="#about" class="block py-4 px-3 text-4xl rounded md:bg-transparent md:p-0">About
+                Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="flex justify-center items-center" style="height: 95vh;">
+      <div class="text-center">
+        <h2 class="text-4xl sm:text-8xl text-white mb-6 font-bold">EXPLORE THE WORLD WITH US
+        </h2>
+        <h2 class="text-7xl mb-8 text-2xl sm:text-6xl font-bold" style="color: #FAA710;">Turning your dreams into
+          destinations</h2>
+        <div class="flex justify-center items-center gap-5">
+          <a href="tel:+919540900810"
+            class="text-white font-large rounded-xl text-4xl py-3 px-7 text-center cursor-pointer"
+            style="background-color: #FAA710;">Call Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="about" id="about">
     <div class="container">
 
-      <a href="#">
-        <h1 class="logo">Tourest</h1>
-      </a>
+      <div class="about-content">
 
-      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
-        <ion-icon name="menu-outline" class="open"></ion-icon>
-        <ion-icon name="close-outline" class="close"></ion-icon>
-      </button>
+        <p class="text-6xl mt-10 sm:text-8xl text-white mb-6 font-bold" style="color: #FAA710;">About Us</p>
 
-      <nav class="navbar">
+        <!-- <h2 class="h2 section-title">Explore the world with us</h2> -->
 
-        <ul class="navbar-list">
+        <p class="about-text font-semibold">
+          Welcome to Maha Yatra, where we craft unforgettable journeys. Explore the diverse landscapes of India and
+          enchanting
+          destinations like Bali, Nepal, Thailand. Let us be your guide to immersive travel experiences, blending
+          cultural
+          richness and scenic beauty into personalized adventures.
+        </p>
 
-          <li>
-            <a href="#" class="navbar-link">Home</a>
+        <ul class="about-list">
+
+          <li class="about-item">
+
+            <div class="about-item-icon" style="background-color: #FAA710;">
+              <ion-icon name="compass"></ion-icon>
+            </div>
+
+            <div class="about-item-content">
+              <h3 class="h3 about-item-title">Best Tour guides</h3>
+
+              <p class="about-item-text font-semibold">
+                Your unforgettable journey begins here with our exceptional tour guides—your key to unparalleled travel
+                experiences.
+              </p>
+            </div>
+
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">About Us</a>
+          <li class="about-item">
+
+            <div class="about-item-icon" style="background-color: #FAA710;">
+              <ion-icon name="briefcase"></ion-icon>
+            </div>
+
+            <div class="about-item-content">
+              <h3 class="h3 about-item-title">Friendly prices</h3>
+
+              <p class="about-item-text font-semibold">
+                Enjoy unbeatable affordability with our best-friendly prices—creating memorable experiences without
+                breaking the bank.
+                Book now!
+              </p>
+            </div>
+
           </li>
 
-          <li>
-            <a href="#" class="navbar-link">Tours</a>
-          </li>
+          <li class="about-item">
 
-          <li>
-            <a href="#" class="navbar-link">Destinations</a>
-          </li>
+            <div class="about-item-icon" style="background-color: #FAA710;">
+              <ion-icon name="umbrella"></ion-icon>
+            </div>
 
-          <li>
-            <a href="#" class="navbar-link">Blog</a>
-          </li>
+            <div class="about-item-content">
+              <h3 class="h3 about-item-title">Customizable tour</h3>
 
-          <li>
-            <a href="#" class="navbar-link">Contact Us</a>
+              <p class="about-item-text font-semibold">
+                Tailor your journey with our customizable tour plans—crafted to match your preferences, creating a
+                unique adventure just
+                for you.
+              </p>
+            </div>
+
           </li>
 
         </ul>
 
-        <a href="#" class="btn btn-secondary">Booking Now</a>
+        <a href="#contact" class="btn btn-primary" style="background-color: #FAA710; border: none;">Book Now</a>
 
-      </nav>
+      </div>
+
+      <figure class="about-banner">
+        <img src="./assets/images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-full p-28">
+      </figure>
 
     </div>
-  </header>
+  </section>
 
 
-
-
-
-  <main>
-    <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="section hero"
-        style="background-image: url('./assets/images/hero-bg-bottom.png') url('./assets/images/hero-bg-top.png')">
-        <div class="container">
-
-          <img src="./assets/images/shape-1.png" width="61" height="61" alt="Vector Shape" class="shape shape-1">
-
-          <img src="./assets/images/shape-2.png" width="56" height="74" alt="Vector Shape" class="shape shape-2">
-
-          <img src="./assets/images/shape-3.png" width="57" height="72" alt="Vector Shape" class="shape shape-3">
-
-          <div class="hero-content">
-
-            <p class="section-subtitle">Explore Your Travel</p>
-
-            <h2 class="hero-title">Trusted Travel Agency</h2>
-
-            <p class="hero-text">
-              I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
-            </p>
-
-            <div class="btn-group">
-              <a href="#" class="btn btn-primary">Contact Us</a>
-
-              <a href="#" class="btn btn-outline">Learn More</a>
+  <section class="destination" id="destination">
+    <div style="margin: 0 10%;">
+      <h2 class="text-6xl sm:text-7xl mb-6 font-bold text-center" style="color: #FAA710;">Destinations</h2>
+      <p class="section-title" style="margin-top: 40px; font-size: 3rem">International</p>
+      <ul class="destination-list" style="margin-bottom: 5rem;">
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Kuala Lumpur, Malaysia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Bali</p>
             </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/937465/pexels-photo-937465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Kathmandu, Nepal" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Thailand</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Nepal</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/2582757/pexels-photo-2582757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Vietnam</p>
+            </div>
+          </a>
+        </li>
+      </ul>
 
+      <p class="section-title" style="margin-top: 8rem; font-size: 3rem">Domestic</p>
+      <ul class="destination-list">
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/7965280/pexels-photo-7965280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Kuala Lumpur, Malaysia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Kashmir</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/13691355/pexels-photo-13691355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Kathmandu, Nepal" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Kerala</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/88212/pexels-photo-88212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Goa</p>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/7846473/pexels-photo-7846473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Shimla</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/7846563/pexels-photo-7846563.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Manali</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="destination-card rounded-3xl">
+            <figure class="card-banner">
+              <img
+                src="https://images.pexels.com/photos/949194/pexels-photo-949194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                width="1110" height="480" loading="lazy" alt="Jakarta, Indonesia" class="img-cover">
+            </figure>
+            <div class="card-content">
+              <p class="card-title" style="color: white;">Mussoorie</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="section popular" id="packages">
+    <div class="container">
+      <h2 class="text-6xl sm:text-7xl my-16 font-bold text-center" style="color: #FAA710;">Our Best Packages</h2>
+      <div class="flex justify-center items-center flex-wrap gap-12">
+
+        <div class="max-w-2xl bg-white border border-gray-200 rounded-3xl shadow hover:scale-105 hover:transition">
+          <!-- <figure class="card-banner"> -->
+          <!-- <a href="#"> -->
+          <img
+            src="https://images.pexels.com/photos/2104882/pexels-photo-2104882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
+          <!-- </a> -->
+          <span class="card-badge"
+            style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
+            <ion-icon name="time-outline"></ion-icon>
+            <time datetime="P12D">5 N - 6D</time>
+          </span>
+          <!-- </figure> -->
+          <div class="card-content">
+            <div class="card-wrapper">
+              <address class="text-5xl font-semibold">Nepal</address>
+            </div>
+            <h3 class="card-title">
+              <a href="#">Embark on a Nepal adventure: majestic Himalayas, ancient temples, rich culture, and warm
+                hospitality. Experience a
+                breathtaking journey of a lifetime.</a>
+            </h3>
           </div>
-
-          <figure class="hero-banner">
-            <img src="./assets/images/hero-banner.png" width="686" height="812" loading="lazy" alt="hero banner"
-              class="w-100">
-          </figure>
-
         </div>
-      </section>
 
-
-
-
-
-      <!-- 
-        - #DESTINATION
-      -->
-
-      <section class="section destination">
-        <div class="container">
-
-          <p class="section-subtitle">Destinations</p>
-
-          <h2 class="h2 section-title">Choose Your Place</h2>
-
-          <ul class="destination-list">
-
-            <li class="w-50">
-              <a href="#" class="destination-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/destination-1.jpg" width="1140" height="1100" loading="lazy"
-                    alt="Malé, Maldives" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <p class="card-subtitle">Malé</p>
-
-                  <h3 class="h3 card-title">Maldives</h3>
-                </div>
-
-              </a>
-            </li>
-
-            <li class="w-50">
-              <a href="#" class="destination-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/destination-2.jpg" width="1140" height="1100" loading="lazy"
-                    alt="Bangkok, Thailand" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <p class="card-subtitle">Bangkok</p>
-
-                  <h3 class="h3 card-title">Thailand</h3>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="destination-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/destination-3.jpg" width="1110" height="480" loading="lazy"
-                    alt="Kuala Lumpur, Malaysia" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <p class="card-subtitle">Kuala Lumpur</p>
-
-                  <h3 class="h3 card-title">Malaysia</h3>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="destination-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/destination-4.jpg" width="1110" height="480" loading="lazy"
-                    alt="Kathmandu, Nepal" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <p class="card-subtitle">Kathmandu</p>
-
-                  <h3 class="h3 card-title">Nepal</h3>
-                </div>
-
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="destination-card">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/destination-5.jpg" width="1110" height="480" loading="lazy"
-                    alt="Jakarta, Indonesia" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-                  <p class="card-subtitle">Jakarta</p>
-
-                  <h3 class="h3 card-title">Indonesia</h3>
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #POPULAR
-      -->
-
-      <section class="section popular">
-        <div class="container">
-
-          <p class="section-subtitle">Featured Tours</p>
-
-          <h2 class="h2 section-title">Most Popular Tours</h2>
-
-          <ul class="popular-list">
-
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/popular-1.jpg" width="740" height="518" loading="lazy"
-                      alt="Kuala Lumpur, Malaysia" class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="P12D">12 Days</time>
-                  </span>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-price">From $50.00</div>
-
-                    <div class="card-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-
-                      <data value="2">(2)</data>
-                    </div>
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
-                  </h3>
-
-                  <address class="card-location">Kuala Lumpur, Malaysia</address>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/popular-2.jpg" width="740" height="518" loading="lazy"
-                      alt="Kuala Lumpur, Malaysia" class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="P12D">12 Days</time>
-                  </span>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-price">From $50.00</div>
-
-                    <div class="card-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-
-                      <data value="2">(2)</data>
-                    </div>
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
-                  </h3>
-
-                  <address class="card-location">Kuala Lumpur, Malaysia</address>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-banner">
-                  <a href="#">
-                    <img src="./assets/images/popular-3.jpg" width="740" height="518" loading="lazy"
-                      alt="Kuala Lumpur, Malaysia" class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="P12D">12 Days</time>
-                  </span>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-price">From $50.00</div>
-
-                    <div class="card-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-
-                      <data value="2">(2)</data>
-                    </div>
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">A good traveler has no fixed plans and is not intent on arriving.</a>
-                  </h3>
-
-                  <address class="card-location">Kuala Lumpur, Malaysia</address>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
-
-      <section class="section about">
-        <div class="container">
-
-          <div class="about-content">
-
-            <p class="section-subtitle">About Us</p>
-
-            <h2 class="h2 section-title">Explore all tour of the world with us.</h2>
-
-            <p class="about-text">
-              Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
-              randomised words
-              which don't look even slightly believable.
-            </p>
-
-            <ul class="about-list">
-
-              <li class="about-item">
-
-                <div class="about-item-icon">
-                  <ion-icon name="compass"></ion-icon>
-                </div>
-
-                <div class="about-item-content">
-                  <h3 class="h3 about-item-title">Tour guide</h3>
-
-                  <p class="about-item-text">
-                    Lorem Ipsum available, but the majority have suffered alteration in some.
-                  </p>
-                </div>
-
-              </li>
-
-              <li class="about-item">
-
-                <div class="about-item-icon">
-                  <ion-icon name="briefcase"></ion-icon>
-                </div>
-
-                <div class="about-item-content">
-                  <h3 class="h3 about-item-title">Friendly price</h3>
-
-                  <p class="about-item-text">
-                    Lorem Ipsum available, but the majority have suffered alteration in some.
-                  </p>
-                </div>
-
-              </li>
-
-              <li class="about-item">
-
-                <div class="about-item-icon">
-                  <ion-icon name="umbrella"></ion-icon>
-                </div>
-
-                <div class="about-item-content">
-                  <h3 class="h3 about-item-title">Reliable tour</h3>
-
-                  <p class="about-item-text">
-                    Lorem Ipsum available, but the majority have suffered alteration in some.
-                  </p>
-                </div>
-
-              </li>
-
-            </ul>
-
-            <a href="#" class="btn btn-primary">Booking Now</a>
-
+        <div
+          class="max-w-2xl bg-white border border-gray-200 shadow rounded-3xl shadow hover:scale-105 hover:transition">
+          <!-- <figure class="card-banner"> -->
+          <!-- <a href="#"> -->
+          <img
+            src="https://images.pexels.com/photos/2902574/pexels-photo-2902574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
+          <!-- </a> -->
+          <span class="card-badge"
+            style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
+            <ion-icon name="time-outline"></ion-icon>
+            <time datetime="P12D">5 N - 6D</time>
+          </span>
+          <!-- </figure> -->
+          <div class="card-content">
+            <div class="card-wrapper">
+              <address class="text-5xl font-semibold">Bali</address>
+            </div>
+            <h3 class="card-title">
+              <a href="#">Discover Bali's enchanting beauty: pristine beaches, lush rice terraces, vibrant culture,
+                and serene temples. A tropical
+                paradise awaits your exploration.</a>
+            </h3>
           </div>
-
-          <figure class="about-banner">
-            <img src="./assets/images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-100">
-          </figure>
-
         </div>
-      </section>
 
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog">
-        <div class="container">
-
-          <p class="section-subtitle">From The Blog Post</p>
-
-          <h2 class="h2 section-title">Latest News & Articles</h2>
-
-          <ul class="blog-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/popular-1.jpg" width="740" height="518" loading="lazy"
-                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="12-04">04 Dec</time>
-                  </span>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-
-                    <div class="author-wrapper">
-                      <figure class="author-avatar">
-                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
-                      </figure>
-
-                      <div>
-                        <a href="#" class="author-name">Jony bristow</a>
-
-                        <p class="author-title">Admin</p>
-                      </div>
-                    </div>
-
-                    <time class="publish-time" datetime="10:30">10:30 AM</time>
-
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">
-                      A good traveler has no fixed plans and is not intent on arriving.
-                    </a>
-                  </h3>
-
-                  <a href="#" class="btn-link">
-                    <span>Read More</span>
-
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/blog-2.jpg" width="740" height="518" loading="lazy"
-                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="12-04">04 Dec</time>
-                  </span>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-
-                    <div class="author-wrapper">
-                      <figure class="author-avatar">
-                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
-                      </figure>
-
-                      <div>
-                        <a href="#" class="author-name">Jony bristow</a>
-
-                        <p class="author-title">Admin</p>
-                      </div>
-                    </div>
-
-                    <time class="publish-time" datetime="10:30">10:30 AM</time>
-
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">
-                      A good traveler has no fixed plans and is not intent on arriving.
-                    </a>
-                  </h3>
-
-                  <a href="#" class="btn-link">
-                    <span>Read More</span>
-
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/blog-3.jpg" width="740" height="518" loading="lazy"
-                      alt="A good traveler has no fixed plans and is not intent on arriving." class="img-cover">
-                  </a>
-
-                  <span class="card-badge">
-                    <ion-icon name="time-outline"></ion-icon>
-
-                    <time datetime="12-04">04 Dec</time>
-                  </span>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-
-                    <div class="author-wrapper">
-                      <figure class="author-avatar">
-                        <img src="./assets/images/author-avatar.png" width="30" height="30" alt="Jony bristow">
-                      </figure>
-
-                      <div>
-                        <a href="#" class="author-name">Jony bristow</a>
-
-                        <p class="author-title">Admin</p>
-                      </div>
-                    </div>
-
-                    <time class="publish-time" datetime="10:30">10:30 AM</time>
-
-                  </div>
-
-                  <h3 class="card-title">
-                    <a href="#">
-                      A good traveler has no fixed plans and is not intent on arriving.
-                    </a>
-                  </h3>
-
-                  <a href="#" class="btn-link">
-                    <span>Read More</span>
-
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+        <div
+          class="max-w-2xl bg-white border border-gray-200 shadow rounded-3xl shadow hover:scale-105 hover:transition">
+          <!-- <figure class="card-banner"> -->
+          <!-- <a href="#"> -->
+          <img
+            src="https://images.pexels.com/photos/937465/pexels-photo-937465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
+          <!-- </a> -->
+          <span class="card-badge"
+            style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
+            <ion-icon name="time-outline"></ion-icon>
+            <time datetime="P12D">5 N - 6D</time>
+          </span>
+          <!-- </figure> -->
+          <div class="card-content">
+            <div class="card-wrapper">
+              <address class="text-5xl font-semibold">Thailand</address>
+            </div>
+            <h3 class="card-title">
+              <a href="#">Thailand beckons with its exotic allure: stunning beaches, bustling markets, ornate temples,
+                and vibrant nightlife.
+                Uncover the magic of Thailand.</a>
+            </h3>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-    </article>
-  </main>
+
+  <section id="contact" class="h-full"
+    style="background-image: url('/assets/images/contact-bg4.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+      <!-- <h1 class="text-center text-5xl">Contact Us</h1> -->
+      <!-- <hr class="h-4 w-full text-orange-400"> -->
+      <div class="flex justify-center items-center py-24" style="height: auto;">
+        <div class="border border-gray-300 p-10 sm:py-32 sm:px-24 rounded-3xl text-center shadow-yellow-100 bg-white"
+          style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+          <h2 class="text-4xl sm:text-7xl mt-6 mb-16 font-bold text-center" style="color: #FAA710;">Contact us</h2>
+          <p class="text-gray-800 text-3xl mb-6">Get in touch with us for your customized
+            trip plan!</p>
+          <form class="form" action="https://formspree.io/f/maygdvov" method="POST">
+            <div class="px-2 grid grid-cols-1 sm:grid-cols-2 sm:px-16 gap-6 text-left">
+              <div class="form-input m-2">
+                <label htmlFor="name" class="">Your Name</label>
+                <input name="name" type="text" id="name"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="Rishav Jha" required />
+              </div>
+              <div class="form-input m-2">
+                <label htmlFor="email" class="">Your email</label>
+                <input name="email" type="email" id="email"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="name@email.com" required />
+              </div>
+              <div class="form-input m-2">
+                <label htmlFor="phone" class="">Your Phone No</label>
+                <input name="phone" type="text" id="phone"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="+91-1234567890" required />
+              </div>
+              <div class="form-input m-2">
+                <label htmlFor="destination" class="">Destination</label>
+                <input name="destination" type="text" id="destination"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="Bali" required />
+              </div>
+              <div class="form-input">
+                <label htmlFor="traveldate" class="">Travel Date</label>
+                <input name="traveldate" type="date" id="traveldate"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" required />
+              </div>
+              <div class="form-input">
+                <label htmlFor="daysoftravel" class="">No of Days of Travel</label>
+                <input name="daysoftravel" type="number" id="daysoftravel"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="4" required />
+              </div>
+              <div class="form-input">
+                <label htmlFor="noofadults" class="">No of Adults</label>
+                <input name="noofadults" type="number" id="noofadults"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="2" required />
+              </div>
+              <div class="form-input">
+                <label htmlFor="noofchildren" class="">No of Children</label>
+                <input name="noofchildren" type="number" id="noofchildren"
+                  class="bg-gray-100 w-full sm:w-96 rounded-md p-4 my-4 outline outline-1 text-2xl"
+                  style="outline-color: #FAA710;" placeholder="2" required />
+              </div>
+            </div>
+            <div class="flex justify-center items-center mt-10">
+              <button type="submit" class="border bg-yellow-300 text-white rounded-xl p-5 text-3xl"
+                style="background-color: #FAA710;">Send
+                message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact page ends -->
 
 
 
@@ -672,71 +507,58 @@
     - #FOOTER
   -->
 
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
-    <div class="container">
+  <footer class="footer"
+    style="background-image: url('https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <div>
 
-      <div class="footer-top">
+      <div class="footer-top"
+        style="display: flex; justify-content: space-between; align-items: center; margin: 0 10%; flex-wrap: wrap;">
 
-        <ul class="footer-list">
+        <!-- <div class="footer-list">
 
-          <li>
-            <p class="footer-list-title">Top destination</p>
-          </li>
+          <img src="/assets/images/main-logo2.png" class="w-96" alt="">
 
-          <li>
-            <a href="#" class="footer-link">Indonesia, Jakarta</a>
-          </li>
+        </div> -->
+        <div>
 
-          <li>
-            <a href="#" class="footer-link">Maldives, Malé</a>
-          </li>
 
-          <li>
-            <a href="#" class="footer-link">Australia, Canberra</a>
-          </li>
 
-          <li>
-            <a href="#" class="footer-link">Thailand, Bangkok</a>
-          </li>
+          <ul class="footer-list">
 
-          <li>
-            <a href="#" class="footer-link">Morocco, Rabat</a>
-          </li>
+            <li>
+              <p class="footer-list-title" style="color: #FAA710;">Top destination</p>
+            </li>
 
-        </ul>
 
-        <ul class="footer-list">
+            <li>
+              <a href="#" class="footer-link">Bali</a>
+            </li>
 
-          <li>
-            <p class="footer-list-title">Categories</p>
-          </li>
+            <li>
+              <a href="#" class="footer-link">Thailand</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Travel</a>
-          </li>
+            <li>
+              <a href="#" class="footer-link">Nepal</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Lifestyle</a>
-          </li>
+            <li>
+              <a href="#" class="footer-link">Vietnam</a>
+            </li>
 
-          <li>
-            <a href="#" class="footer-link">Fashion</a>
-          </li>
+          </ul>
 
-          <li>
-            <a href="#" class="footer-link">Education</a>
-          </li>
+        </div>
 
-          <li>
-            <a href="#" class="footer-link">Food & Drink</a>
-          </li>
 
-        </ul>
+
+
+
 
         <ul class="footer-list">
 
           <li>
-            <p class="footer-list-title">Quick links</p>
+            <p class="footer-list-title" style="color: #FAA710;">Quick links</p>
           </li>
 
           <li>
@@ -748,80 +570,75 @@
           </li>
 
           <li>
-            <a href="#" class="footer-link">Tours</a>
+            <a href="#" class="footer-link">Destinations</a>
           </li>
 
           <li>
-            <a href="#" class="footer-link">Booking</a>
+            <a href="#" class="footer-link">Packages</a>
           </li>
 
-          <li>
-            <a href="#" class="footer-link">Terms & Conditions</a>
-          </li>
+
 
         </ul>
 
-        <div class="footer-list">
-
-          <p class="footer-list-title">Get a newsletter</p>
-
-          <p class="newsletter-text">
-            For the latest deals and tips, travel no further than your inbox
-          </p>
-
-          <form action="" class="newsletter-form">
-            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
-
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-          </form>
-
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <a href="#" class="logo">Tourest</a>
-
-        <p class="copyright">
-          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
-        </p>
-
-        <ul class="social-list">
+        <ul class="footer-list">
 
           <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
+            <p class="footer-list-title" style="color: #FAA710;">Reach Us</p>
           </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
+          <li class="flex justify-center items-center gap-5">
+            <span class="text-white">Manish Soni</span><a href="tel:+919540900810" class="footer-link">&#128222;
+              +91-9540900810</a>
           </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+          <li class="flex justify-center items-center gap-5">
+            <span class="text-white flex">Shivan Saini</span><a href="tel:+919650374848" class="footer-link">&#128222;
+              +91-9650374848</a>
           </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
 
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
 
+          <ul class="social-list mt-10">
+
+            <li>
+              <a href="https://www.facebook.com/MahaYatra.in" target="_blank" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/maha_yatra/" target="_blank" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
         </ul>
 
+
+
+
       </div>
+
+      <div class="footer-bottom" style="display: flex; justify-content: center; align-items: center; margin: 30px 0;">
+
+        <!-- <a href="#" class="logo">MAHAYATRA</a> -->
+
+
+
+
+
+      </div>
+      <p class="copyright" style="text-align: center;">
+        &copy; 2022 <a href="#" class="copyright-link">Maha Yatra</a>. All Rights Reserved
+      </p>
 
     </div>
   </footer>
@@ -850,6 +667,7 @@
   <!-- 
     - ionicon link
   -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
