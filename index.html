@@ -51,16 +51,53 @@
 
 </head>
 
-<body>
+<body class="relative">
 
+
+  <nav class="bg-white fixed w-full top-0 z-10">
+    <div class=" my-2 mx-3 px-8 rounded-xl shadow-xl border border-1 border-[#FAA710]">
+        <div class="flex justify-between items-center py-1">
+            <div class="flex items-center">
+                <img src="/assets/images/main-logo2.png" alt="Maha Yatra Logo" class="h-[50px]">
+            </div>
+            <div class="hidden md:flex space-x-8 text-xl font-medium text-gray-700">
+                <a href="#home" class="hover:bg-[#F8B84E] hover:bg-opacity-40 px-3 py-2 rounded-full text-2xl">Home</a>
+                <a href="#" class="hover:bg-[#F8B84E] hover:bg-opacity-40 px-3 py-2 rounded-full text-2xl">International</a>
+                <a href="#" class="hover:bg-[#F8B84E] hover:bg-opacity-40 px-3 py-2 rounded-full text-2xl">Domestic</a>
+                <a href="#destination" class="hover:bg-[#F8B84E] hover:bg-opacity-40 px-3 py-2 rounded-full text-2xl">Destination</a>
+                <a href="#about" class="hover:bg-[#F8B84E] hover:bg-opacity-40 px-3 py-2 rounded-full text-2xl">About Us</a>
+                <a href="#contact" class="px-3 py-2 rounded-full text-2xl bg-[#FAA710] rounded-lg text-white">Contact Us</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="focus:outline-none">
+                    <div class="hamburger space-y-1.5">
+                        <div class="w-6 h-0.5 bg-gray-700"></div>
+                        <div class="w-6 h-0.5 bg-gray-700"></div>
+                        <div class="w-6 h-0.5 bg-gray-700"></div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="menu" class="hidden md:hidden">
+        <ul class="flex flex-col items-center space-y-4 text-xl font-medium text-gray-700">
+            <li><a href="#" class="hover:text-indigo-600">Home</a></li>
+            <li><a href="#" class="hover:text-indigo-600">International</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Domestic</a></li>
+            <li><a href="#" class="hover:text-indigo-600">Destination</a></li>
+            <li><a href="#" class="hover:text-indigo-600">About Us</a></li>
+            <li><a href="#contact" class="hover:text-indigo-600">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="content">
   <section class="h-full" id="home"
     style="background-image: url('/assets/images/hero-back.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
 
-    <nav class="fixed px-8 w-full z-20 top-0 start-0 shadow-lg" style="background-color: white">
+    <!-- <nav class="fixed px-8 w-full z-20 top-0 start-0 shadow-lg" style="background-color: white">
       <div class="flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/assets/images/main-logo2.png" class="h-20 sm:h-40" alt="Flowbite Logo">
-          <!-- <span class="my-3 self-center text-6xl font-semibold whitespace-nowrap text-white" style="font-family: rupture;">MahaYatra</span> -->
         </a>
         <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <a href="#contact" class="text-white font-large rounded-xl text-4xl pt-4 pb-3 px-3 text-center cursor-pointer"
@@ -95,7 +132,10 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+
+   
 
 
     <div class="flex justify-center items-center" style="height: 95vh;">
@@ -351,11 +391,11 @@
             src="https://images.pexels.com/photos/2104882/pexels-photo-2104882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
           <!-- </a> -->
-          <span class="card-badge"
+          <!-- <span class="card-badge"
             style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
             <ion-icon name="time-outline"></ion-icon>
             <time datetime="P12D">5 N - 6D</time>
-          </span>
+          </span> -->
           <!-- </figure> -->
           <div class="card-content">
             <div class="card-wrapper">
@@ -377,11 +417,11 @@
             src="https://images.pexels.com/photos/2902574/pexels-photo-2902574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
           <!-- </a> -->
-          <span class="card-badge"
+          <!-- <span class="card-badge"
             style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
             <ion-icon name="time-outline"></ion-icon>
             <time datetime="P12D">5 N - 6D</time>
-          </span>
+          </span> -->
           <!-- </figure> -->
           <div class="card-content">
             <div class="card-wrapper">
@@ -403,11 +443,11 @@
             src="https://images.pexels.com/photos/937465/pexels-photo-937465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             loading="lazy" alt="Kuala Lumpur, Malaysia" class="w-full rounded-t-3xl">
           <!-- </a> -->
-          <span class="card-badge"
+          <!-- <span class="card-badge"
             style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: #FAA710;">
             <ion-icon name="time-outline"></ion-icon>
             <time datetime="P12D">5 N - 6D</time>
-          </span>
+          </span> -->
           <!-- </figure> -->
           <div class="card-content">
             <div class="card-wrapper">
@@ -656,8 +696,18 @@
   </a>
 
 
+</div>
 
 
+  <script>
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
   <!-- 
     - custom js link
