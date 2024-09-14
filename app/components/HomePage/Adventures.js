@@ -1,8 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import { travelDestinations } from '@/app/data/travelDestinations'
+import { adventureDestinations } from '@/app/data/adventureDestinations';
 
-const Trending = () => {
+const Adventures = () => {
 
     const [startIndex, setStartIndex] = useState(0);
     const itemsPerPage = 4;
@@ -11,14 +11,14 @@ const Trending = () => {
         const intervalId = setInterval(() => {
             setStartIndex(prevIndex => {
                 const newIndex = prevIndex + itemsPerPage;
-                return newIndex >= travelDestinations.length ? 0 : newIndex;
+                return newIndex >= adventureDestinations.length ? 0 : newIndex;
             });
         }, 5000); // Change cards every 3 seconds
 
         return () => clearInterval(intervalId);
     }, []);
 
-    const currentDestinations = travelDestinations.slice(startIndex, startIndex + itemsPerPage);
+    const currentDestinations = adventureDestinations.slice(startIndex, startIndex + itemsPerPage);
 
     // const translateValue = `translate-x-${startIndex * -100}`;
 
@@ -28,7 +28,9 @@ const Trending = () => {
                 <div className="container max-w-screen-xl mx-auto">
                     <div className="">
                         <div className="py-5">
-                            <h2 className="text-3xl sm:text-5xl font-bold text-[#FFA104] pb-8">Trending Destinations</h2>
+                            <h2 className="text-3xl sm:text-5xl font-bold text-[#FFA104] pb-8">
+                                Discover Thrilling Outdoor Adventures
+                            </h2>
                         </div>
 
                         <div className="overflow-hidden">
@@ -47,7 +49,7 @@ const Trending = () => {
                                             />
                                             <div className="m-4">
                                                 <div className="pb-6">
-                                                    <h3 className="text-[#191D82] my-2">{destination.location}</h3>
+                                                    <h3 className="text-[#191D82] my-2">{destination.place}</h3>
                                                     <h2 className="text-[#05073C] font-medium my-2">
                                                         {destination.description.split(' ').slice(0, 8).join(' ')}{destination.description.split(' ').length > 8 ? '...' : ''}
                                                     </h2>
@@ -73,4 +75,4 @@ const Trending = () => {
     )
 }
 
-export default Trending
+export default Adventures

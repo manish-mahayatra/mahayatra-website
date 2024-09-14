@@ -5,7 +5,7 @@ const About = () => {
         <>
             <section className="bg-white">
                 <div
-                    className="container mx-auto bg-[#EB662B] bg-opacity-10 rounded-lg p-6 flex flex-col md:flex-row items-center md:items-start">
+                    className="container max-w-screen-xl mx-auto bg-[#EB662B] bg-opacity-10 rounded-lg p-6 flex flex-col md:flex-row items-center md:items-start">
                     <div className="w-full md:w-2/3 p-6">
                         <h1 className="text-3xl sm:text-5xl font-bold text-[#FFA104] my-6">Why choose Mahayatra !</h1>
                         <p className="mb-6 text-gray-700 mx-6 font-light">

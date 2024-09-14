@@ -1,8 +1,10 @@
 import React from 'react';
+import footer from "../../public/images/footer-img.png"
 
 const Footer = () => {
     return (
-        <footer className="bg-[#01376c] text-white py-8">
+        <footer className="bg-footer-bg text-white py-8">
+
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap justify-between items-center border-b border-gray-500 pb-6 mb-6">
                     <div className="w-full md:w-auto mb-4 md:mb-0">

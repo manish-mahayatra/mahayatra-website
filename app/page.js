@@ -9,11 +9,12 @@ import Contact from "./components/HomePage/Contact";
 import Testimonial from "./components/HomePage/Testimonial";
 import TravelGuide from "./components/HomePage/TravelGuide";
 import Footer from "./components/Footer";
+import Adventures from "./components/HomePage/Adventures";
 
 export default function Home() {
   return (
     <>
-      <section className="h-screen shadow-black shadow-custom-inset" id="home">
+      <section className="h-screen shadow-custom-inset" id="home">
         <HeroSection />
       </section>
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Monthly />
       <Weekent />
       <About />
+      <Adventures />
       <TravelGuide />
       <Testimonial />
       <Footer />

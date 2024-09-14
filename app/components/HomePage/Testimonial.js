@@ -2,61 +2,38 @@ import React from 'react';
 
 const testimonials = [
     {
-        title: 'Great Work',
-        content: "I think Educrat is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance",
-        name: 'Courtney Henry',
-        role: 'Web Designer',
-        imgSrc: 'https://via.placeholder.com/150', // Replace with actual image URL
+        title: 'Absolutely Amazing!',
+        content: "Bali was beyond what I expected. From the beaches to the culture, everything was breathtaking. Can't wait to visit again!",
+        name: 'Mahesh Bhairwa.',
     },
     {
-        title: 'Great Work',
-        content: "I think Educrat is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance",
-        name: 'Courtney Henry',
-        role: 'Web Designer',
-        imgSrc: 'https://via.placeholder.com/150', // Replace with actual image URL
+        title: 'A Soulful Experience',
+        content: "Rishikesh was the perfect escape. The mix of adventure and spirituality gave me a whole new perspective. Loved every moment of it!",
+        name: 'Rishav Jha.',
     },
     {
-        title: 'Great Work',
-        content: "I think Educrat is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance",
-        name: 'Courtney Henry',
-        role: 'Web Designer',
-        imgSrc: 'https://via.placeholder.com/150', // Replace with actual image URL
+        title: 'A Luxe Vacation',
+        content: "Dubai was like stepping into a futuristic world. The skyline, the shopping, and the nightlife—everything was just top-notch!",
+        name: 'Ritu Panchal.',
     },
 ];
+
 
 const Testimonial = () => {
     return (
         <div className="bg-[#FFF6F5] py-16">
-            <h2 className="text-center text-2xl font-semibold mb-10">What our Travelers are saying</h2>
-            <div className="flex justify-center space-x-6">
+            <h2 className="text-center text-2xl sm:text-3xl font-semibold mb-10">What our Travelers are saying</h2>
+            <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6">
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={index}
-                        className="bg-white p-6 rounded-lg shadow-md max-w-xs text-center"
+                        className="bg-white p-6 rounded-lg shadow-md max-w-xs text-left mx-auto sm:mx-0"
                     >
-                        <h3 className="text-lg font-bold mb-2">{testimonial.title}</h3>
+                        <h3 className="text-lg font-bold mb-2 text-[#FFA104]">{testimonial.title}</h3>
                         <p className="text-gray-700 mb-4">{testimonial.content}</p>
-                        <div className="flex items-center justify-center">
-                            <img
-                                src={testimonial.imgSrc}
-                                alt={testimonial.name}
-                                className="w-12 h-12 rounded-full mr-2"
-                            />
-                            <div>
-                                <p className="font-semibold">{testimonial.name}</p>
-                                <p className="text-gray-500">{testimonial.role}</p>
-                            </div>
-                        </div>
+                        <p className="font-semibold text-[#FFA104]">{testimonial.name}</p>
                     </div>
                 ))}
-            </div>
-            <div className="flex justify-center space-x-16 mt-10 text-center">
-                <div className="text-2xl font-bold">4.9</div>
-                <div className="text-2xl font-bold">16M</div>
-            </div>
-            <div className="flex justify-center space-x-16 mt-2 text-center text-gray-600">
-                <div>1000+ reviews on TripAdvisor. Certificate of Excellence</div>
-                <div>Happy Customers</div>
             </div>
         </div>
     );
