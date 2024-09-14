@@ -37,10 +37,10 @@ const Navbar = () => {
             {/* Navbar */}
             <nav className={`${navbarBg} w-full top-0 z-50 fixed transition-all duration-300`}>
                 <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
-                    <div className="flex justify-between items-center py-2">
+                    <div className="flex justify-between items-center">
                         {/* Logo */}
                         <div className="flex items-center">
-                            <img src="/images/logo-mahayatra.png" alt="Maha Yatra Logo" className="h-10 lg:h-32 transition-transform duration-300" />
+                            <img src="/images/logo-mahayatra.png" alt="Maha Yatra Logo" className="h-10 lg:h-28 transition-transform duration-300" />
                         </div>
 
                         {/* Desktop Links */}

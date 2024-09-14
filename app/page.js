@@ -14,7 +14,7 @@ import Adventures from "./components/HomePage/Adventures";
 export default function Home() {
   return (
     <>
-      <section className="h-screen shadow-custom-inset" id="home">
+      <section className="h-screen " id="home">
         <HeroSection />
       </section>
 
