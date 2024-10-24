@@ -3,6 +3,9 @@
 </style>
 
 export default function HeroSection() {
+    const phoneNumber = "1234567890"; // Replace with the actual phone number
+    const message = "Hello! I would like to get in touch.";
+
     return (
         <>
             <div className="bg-[url('/images/mahayatra-bg.jpeg')] bg-no-repeat bg-center bg-cover shadow-custom-inset">
@@ -20,7 +23,14 @@ export default function HeroSection() {
                         {/* <h2 className="text-xl sm:text-4xl lg:text-5xl mb-8 font-bold text-white drop-shadow-2xl transition-all duration-300 hover:text-[#F8B84E]">
                         </h2> */}
                         <div className="flex justify-center items-center gap-5">
-                            <a href="#contact" className="px-3 py-2 rounded-xl text-lg bg-[#FAA710] text-white transition-colors duration-300">Get in touch!</a>
+                            <a
+                                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-3 py-2 rounded-xl text-lg bg-[#FAA710] text-white transition-colors duration-300"
+                            >
+                                Get in touch!
+                            </a>
                         </div>
                     </div>
                 </div>

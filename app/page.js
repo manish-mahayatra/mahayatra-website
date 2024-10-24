@@ -3,13 +3,13 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HomePage/HeroSection";
 import Trending from "./components/HomePage/Trending";
 import Monthly from "./components/HomePage/Monthly";
-import Weekent from "./components/HomePage/Weekent";
 import About from "./components/HomePage/About";
 import Contact from "./components/HomePage/Contact";
 import Testimonial from "./components/HomePage/Testimonial";
 import TravelGuide from "./components/HomePage/TravelGuide";
 import Footer from "./components/Footer";
 import Adventures from "./components/HomePage/Adventures";
+import Weekend from "./components/HomePage/Weekend";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
 
       <Trending />
       <Monthly />
-      <Weekent />
+      <Weekend />
       <About />
       <Adventures />
       <TravelGuide />
