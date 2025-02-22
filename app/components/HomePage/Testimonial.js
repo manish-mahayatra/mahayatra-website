@@ -1,42 +1,55 @@
-import React from 'react';
+export default function Testimonials() {
+    const testimonials = [
+        {
+            name: "Sarah Johnson",
+            location: "New York, USA",
+            comment: "Amazing experience! The team made our vacation truly unforgettable. Will definitely book again!",
+            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+        },
+        {
+            name: "Michael Chen",
+            location: "Singapore",
+            comment: "Professional service and great attention to detail. Everything was perfectly organized.",
+            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+        },
+        {
+            name: "Emma Wilson",
+            location: "London, UK",
+            comment: "Fantastic destinations and competitive prices. The customer service was exceptional!",
+            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+        }
+    ];
 
-const testimonials = [
-    {
-        title: 'Absolutely Amazing!',
-        content: "Bali was beyond what I expected. From the beaches to the culture, everything was breathtaking. Can't wait to visit again!",
-        name: 'Mahesh Bhairwa.',
-    },
-    {
-        title: 'A Soulful Experience',
-        content: "Rishikesh was the perfect escape. The mix of adventure and spirituality gave me a whole new perspective. Loved every moment of it!",
-        name: 'Rishav Jha.',
-    },
-    {
-        title: 'A Luxe Vacation',
-        content: "Dubai was like stepping into a futuristic world. The skyline, the shopping, and the nightlife—everything was just top-notch!",
-        name: 'Ritu Panchal.',
-    },
-];
-
-
-const Testimonial = () => {
     return (
-        <div className="bg-[#FFF6F5] py-16">
-            <h2 className="text-center text-2xl sm:text-3xl font-semibold mb-10">What our Travelers are saying</h2>
-            <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6">
-                {testimonials.map((testimonial, index) => (
-                    <div
-                        key={index}
-                        className="bg-white p-6 rounded-lg shadow-md max-w-xs text-left mx-auto sm:mx-0"
-                    >
-                        <h3 className="text-lg font-bold mb-2 text-[#FFA104]">{testimonial.title}</h3>
-                        <p className="text-gray-700 mb-4">{testimonial.content}</p>
-                        <p className="font-semibold text-[#FFA104]">{testimonial.name}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+        <section data-name="testimonials" className="section-padding">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="section-title">What Our Travelers Say</h2>
+                <p className="section-subtitle">Real experiences from our satisfied customers</p>
 
-export default Testimonial;
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {testimonials.map((testimonial, index) => (
+                        <div key={index} className="testimonial-card">
+                            <div className="flex items-center mb-4">
+                                <img
+                                    src={testimonial.avatar}
+                                    alt={testimonial.name}
+                                    className="w-12 h-12 rounded-full object-cover mr-4"
+                                />
+                                <div>
+                                    <h3 className="font-semibold">{testimonial.name}</h3>
+                                    <p className="text-gray-600 text-sm">{testimonial.location}</p>
+                                </div>
+                            </div>
+                            <p className="text-gray-700">{testimonial.comment}</p>
+                            <div className="flex text-yellow-400 mt-4">
+                                {[...Array(5)].map((_, i) => (
+                                    <i key={i} className="fas fa-star"></i>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}

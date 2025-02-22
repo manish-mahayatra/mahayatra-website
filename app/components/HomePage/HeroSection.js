@@ -1,40 +1,56 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-</style>
+"use client"
+import { useState, useEffect } from "react";
+import "./styling/HeroSection.css"
 
 export default function HeroSection() {
-    const phoneNumber = "1234567890"; // Replace with the actual phone number
-    const message = "Hello! I would like to get in touch.";
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        {
+            image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+            title: "Discover Amazing Places",
+            subtitle: "Experience the world's most breathtaking destinations"
+        },
+        {
+            image: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d",
+            title: "Adventure Awaits",
+            subtitle: "Create unforgettable memories with us"
+        },
+        {
+            image: "https://images.unsplash.com/photo-1433838552652-f9a46b332c40",
+            title: "Explore Paradise",
+            subtitle: "Your dream vacation starts here"
+        }
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
-        <>
-            <div className="bg-[url('/images/mahayatra-bg.jpeg')] bg-no-repeat bg-center bg-cover shadow-custom-inset">
-                <div className="flex justify-center items-center h-[100vh] max-w-screen-xl mx-auto px-4 sm:px-12">
-                    {/* Add padding for responsiveness */}
-                    <div className="text-center">
-                        {/* Aligning all text to the left */}
-                        <h2 className="text-2xl sm:text-5xl lg:text-6xl text-white mb-6 font-semibold drop-shadow-4xl transition-all duration-300 hover:outline-1 hover:outline-black font-serif">
-                            "From dreams to destinations <br /> we make it happen"
-                        </h2>
-                        {/* <h2 className="text-2xl sm:text-5xl lg:text-6xl text-white mb-6 font-bold drop-shadow-lg">
-                            <span className="text-[#F8B84E] drop-shadow-xl font-bold mx-1">Mahayatra’s</span> 
-                            Epic Deals
-                        </h2> */}
-                        {/* <h2 className="text-xl sm:text-4xl lg:text-5xl mb-8 font-bold text-white drop-shadow-2xl transition-all duration-300 hover:text-[#F8B84E]">
-                        </h2> */}
-                        <div className="flex justify-center items-center gap-5">
-                            <a
-                                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-3 py-2 rounded-xl text-lg bg-[#FAA710] text-white transition-colors duration-300"
-                            >
-                                Get in touch!
-                            </a>
-                        </div>
+        <div data-name="hero-carousel" className="hero-carousel">
+            {slides.map((slide, index) => (
+                <div
+                    key={index}
+                    className="carousel-slide"
+                    style={{
+                        backgroundImage: `url(${slide.image})`,
+                        opacity: currentSlide === index ? 1 : 0
+                    }}
+                >
+                    <div className="carousel-overlay"></div>
+                    <div className="carousel-content">
+                        <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
+                        <p className="text-xl mb-8">{slide.subtitle}</p>
+                        <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+                            Explore Now
+                        </button>
                     </div>
                 </div>
-            </div>
-        </>
-    )
+            ))}
+        </div>
+    );
 }

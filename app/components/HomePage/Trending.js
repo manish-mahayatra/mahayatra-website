@@ -1,99 +1,72 @@
-"use client"
-import React, { useState } from 'react';
-import { travelDestinations } from '@/app/data/travelDestinations';
-import EnquiryModal from '../UI/EnquiryModal/EnquiryModal'; // Import the modal component
+import "./styling/Cards.css"
 
-const Trending = () => {
-    const [startIndex, setStartIndex] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedDestination, setSelectedDestination] = useState('');
-
-    const itemsPerPage = 3;
-
-    const handleNext = () => {
-        setStartIndex((prevIndex) => {
-            const newIndex = prevIndex + itemsPerPage;
-            return newIndex >= travelDestinations.length ? 0 : newIndex;
-        });
-    };
-
-    const handlePrev = () => {
-        setStartIndex((prevIndex) => {
-            const newIndex = prevIndex - itemsPerPage;
-            return newIndex < 0 ? travelDestinations.length - itemsPerPage : newIndex;
-        });
-    };
-
-    const currentDestinations = travelDestinations.slice(startIndex, startIndex + itemsPerPage);
-
-    const handleEnquireNow = (destination) => {
-        setSelectedDestination(destination.location); // Set the selected destination
-        setIsModalOpen(true); // Open the modal
-    };
+export default function Trending() {
+    const destinations = [
+        {
+            name: "Bali, Indonesia",
+            image: "https://images.unsplash.com/photo-1537996194471-e657df975ab4",
+            price: "$899",
+            rating: 4.8,
+            reviews: 245
+        },
+        {
+            name: "Santorini, Greece",
+            image: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e",
+            price: "$1299",
+            rating: 4.9,
+            reviews: 189
+        },
+        {
+            name: "Maldives",
+            image: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8",
+            price: "$1499",
+            rating: 4.7,
+            reviews: 312
+        }
+    ];
 
     return (
-        <>
-            <section className="trending py-[50px] bg-white" id="trending">
-                <div className="container max-w-screen-xl mx-auto relative">
-                    <div className="py-5 text-center">
-                        <h2 className="text-3xl sm:text-5xl font-bold text-[#FFA104] pb-8">Trending Destinations</h2>
-                    </div>
-
-                    <div className="relative overflow-hidden">
-                        <div className="flex flex-wrap justify-center gap-6 transition-transform duration-500 ease-in-out">
-                            {currentDestinations.map((destination, index) => (
-                                <div
-                                    key={index}
-                                    className="w-[300px] mb-5 bg-white shadow-lg rounded-lg hover:scale-105 hover:transition"
-                                >
-                                    <div className="m-4">
-                                        <img
-                                            className="rounded-xl"
-                                            src={destination.image}
-                                            alt={`${destination.location} image`}
-                                        />
-                                        <div className="m-4">
-                                            <div className="pb-6">
-                                                <h3 className="text-[#191D82] my-2">{destination.location}</h3>
-                                                <h2 className="text-[#05073C] font-medium my-2">
-                                                    {destination.description.split(' ').slice(0, 8).join(' ')}{destination.description.split(' ').length > 8 ? '...' : ''}
-                                                </h2>
-                                            </div>
-                                            <hr className="" />
-                                            <div className="flex justify-start items-center text-[#FFA104] pt-2 gap-x-2 cursor-pointer" onClick={() => handleEnquireNow(destination)}>
-                                                <p>Enquire Now</p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"
-                                                    className="size-6">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Left and Right Navigation Buttons */}
-                        <button
-                            onClick={handlePrev}
-                            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-2 rounded-full"
-                        >
-                            &#8249; {/* Left arrow symbol */}
-                        </button>
-                        <button
-                            onClick={handleNext}
-                            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-2 rounded-full"
-                        >
-                            &#8250; {/* Right arrow symbol */}
-                        </button>
-                    </div>
+        <section data-name="trending-destinations" id="destinations" className="py-20 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Trending Destinations</h2>
+                    <p className="text-lg text-gray-600">Discover the most popular destinations loved by our travelers</p>
                 </div>
-            </section>
 
-            {/* Enquiry Modal */}
-            <EnquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} destination={selectedDestination} />
-        </>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {destinations.map((dest, index) => (
+                        <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                            <div className="relative">
+                                <img
+                                    src={dest.image}
+                                    alt={dest.name}
+                                    className="w-full h-64 object-cover transform transition duration-300 group-hover:scale-105"
+                                />
+                                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full shadow-md">
+                                    <span className="text-blue-600 font-semibold">{dest.price}</span>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">{dest.name}</h3>
+                                <div className="flex items-center mb-4">
+                                    <div className="flex text-yellow-400">
+                                        {[...Array(5)].map((_, i) => (
+                                            <i key={i} className="fas fa-star text-sm"></i>
+                                        ))}
+                                    </div>
+                                    <span className="ml-2 text-sm text-gray-600">{dest.rating} ({dest.reviews} reviews)</span>
+                                </div>
+                                <div className="flex items-center justify-between">
+                                    <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center justify-center space-x-2">
+                                        <span>Book Now</span>
+                                        <i className="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }
-
-export default Trending;

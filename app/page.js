@@ -5,8 +5,8 @@ import Trending from "./components/HomePage/Trending";
 import Monthly from "./components/HomePage/Monthly";
 import About from "./components/HomePage/About";
 import Contact from "./components/HomePage/Contact";
+import Gallery from "./components/HomePage/Gallery";
 import Testimonial from "./components/HomePage/Testimonial";
-import TravelGuide from "./components/HomePage/TravelGuide";
 import Footer from "./components/Footer";
 import Adventures from "./components/HomePage/Adventures";
 import Weekend from "./components/HomePage/Weekend";
@@ -22,8 +22,7 @@ export default function Home() {
       <Monthly />
       <Weekend />
       <About />
-      <Adventures />
-      <TravelGuide />
+      <Gallery />
       <Testimonial />
       <Footer />
     </>
