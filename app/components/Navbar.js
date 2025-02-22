@@ -14,7 +14,7 @@ export default function Navbar() {
                         <Image
                             src="/images/logo.png"
                             width={200}
-                            height={50}
+                            height={50} 
                             alt="Logo"
                         />
                     </div>
