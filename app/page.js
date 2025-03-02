@@ -17,7 +17,6 @@ export default function Home() {
       <section className="h-screen " id="home">
         <HeroSection />
       </section>
-
       <Trending />
       <Monthly />
       <Weekend />
