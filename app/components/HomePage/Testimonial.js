@@ -1,24 +1,35 @@
+"use client"
+import { useState, useEffect } from "react";
+
 export default function Testimonials() {
-    const testimonials = [
-        {
-            name: "Sarah Johnson",
-            location: "New York, USA",
-            comment: "Amazing experience! The team made our vacation truly unforgettable. Will definitely book again!",
-            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-        },
-        {
-            name: "Michael Chen",
-            location: "Singapore",
-            comment: "Professional service and great attention to detail. Everything was perfectly organized.",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-        },
-        {
-            name: "Emma Wilson",
-            location: "London, UK",
-            comment: "Fantastic destinations and competitive prices. The customer service was exceptional!",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
-        }
-    ];
+
+    const [testimonial, setTestimonial] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {   
+        const fetchDestinations = async () => {
+            try {
+                const res = await fetch("http://localhost:1337/api/reviews?populate=*");
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const data = await res.json();
+                const formatted = data.data.map((item) => ({
+                    name: item.name,
+                    location: item.location,
+                    comment: item.description,
+                    avatar: `http://localhost:1337${item.profile?.url}`,
+                }));
+                setTestimonial(formatted);
+            } catch (error) {
+                console.error("Error fetching destinations:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchDestinations();
+    }, []);
 
     return (
         <section data-name="testimonials" className="section-padding">
@@ -27,7 +38,7 @@ export default function Testimonials() {
                 <p className="section-subtitle">Real experiences from our satisfied customers</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((testimonial, index) => (
+                    {testimonial.map((testimonial, index) => (
                         <div key={index} className="testimonial-card">
                             <div className="flex items-center mb-4">
                                 <img

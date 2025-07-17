@@ -19,7 +19,6 @@ const EnquiryModal = ({ isOpen, onClose, destination }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here (e.g., save data to Airtable)
-        console.log(formData);
         onClose(); // Close the modal after submission
     };
 
