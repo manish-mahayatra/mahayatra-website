@@ -20,7 +20,7 @@ export default function Gallery() {
                 const data = await res.json();
                 const formatted = data.data.map((item) => ({
                     name: item.title,
-                    image: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.image?.url}`,
+                    image: `https://loving-compassion-bc81cd979e.media.strapiapp.com/${item.image?.url}`,
                 }));
                 setDestinations(formatted);
             } catch (error) {

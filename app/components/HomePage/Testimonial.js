@@ -22,7 +22,7 @@ export default function Testimonials() {
                     name: item.name,
                     location: item.location,
                     comment: item.description,
-                    avatar: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.profile?.url}`,
+                    avatar: `https://loving-compassion-bc81cd979e.media.strapiapp.com/${item.profile?.url}`,
                 }));
                 setTestimonial(formatted);
             } catch (error) {

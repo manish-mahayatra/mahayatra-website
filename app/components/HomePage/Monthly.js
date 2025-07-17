@@ -24,7 +24,7 @@ export default function Monthly() {
                     name: item.title,
                     price: `From ₹${item.startingFrom}`,
                     description: item.shortDescription,
-                    image: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.image?.url}`, // Ensure full URL
+                    image: `https://loving-compassion-bc81cd979e.media.strapiapp.com/${item.image?.url}`, // Ensure full URL
                     rating: 4.8, // default since your API doesn’t have this
                     reviews: 127 // default too
                 }));
