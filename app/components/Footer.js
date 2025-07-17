@@ -78,7 +78,7 @@ export default function Footer() {
                         <a href="#">Privacy Policy</a>
                         <span className="separator">|</span>
                         <a href="#">Terms of Service</a>
-                        <span className="separator">|</span>
+                        <span className="separator">|</span> 
                         <a href="#">Cookie Policy</a>
                     </div>
                 </div>
