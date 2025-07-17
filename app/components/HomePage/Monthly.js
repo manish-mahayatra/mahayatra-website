@@ -11,7 +11,11 @@ export default function Monthly() {
     useEffect(() => {
         const fetchDestinations = async () => {
             try {
-                const res = await fetch("http://localhost:1337/api/monthlies?populate=*");
+                const res = await fetch("https://loving-compassion-bc81cd979e.strapiapp.com/api/monthlies?populate=*", {
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+                    },
+                });
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }
@@ -20,7 +24,7 @@ export default function Monthly() {
                     name: item.title,
                     price: `From ₹${item.startingFrom}`,
                     description: item.shortDescription,
-                    image: `http://localhost:1337${item.image?.url}`, // Ensure full URL
+                    image: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.image?.url}`, // Ensure full URL
                     rating: 4.8, // default since your API doesn’t have this
                     reviews: 127 // default too
                 }));

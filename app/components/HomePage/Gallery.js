@@ -9,14 +9,18 @@ export default function Gallery() {
     useEffect(() => {
         const fetchDestinations = async () => {
             try {
-                const res = await fetch("http://localhost:1337/api/galleries?populate=*");
+                const res = await fetch("https://loving-compassion-bc81cd979e.strapiapp.com/api/galleries?populate=*", {
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+                    },
+                });
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }
                 const data = await res.json();
                 const formatted = data.data.map((item) => ({
                     name: item.title,
-                    image: `http://localhost:1337${item.image?.url}`,
+                    image: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.image?.url}`,
                 }));
                 setDestinations(formatted);
             } catch (error) {

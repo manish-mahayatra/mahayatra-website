@@ -10,7 +10,11 @@ export default function HeroSection() {
     useEffect(() => {
         const fetchDestinations = async () => {
             try {
-                const res = await fetch("http://localhost:1337/api/homeimages?populate=*");
+                const res = await fetch("https://loving-compassion-bc81cd979e.strapiapp.com/api/homeimages?populate=*", {
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+                    },
+                });
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }

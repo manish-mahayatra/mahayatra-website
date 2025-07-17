@@ -9,7 +9,11 @@ export default function Testimonials() {
     useEffect(() => {   
         const fetchDestinations = async () => {
             try {
-                const res = await fetch("http://localhost:1337/api/reviews?populate=*");
+                const res = await fetch("https://loving-compassion-bc81cd979e.strapiapp.com/api/reviews?populate=*", {
+                    headers: {
+                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
+                    },
+                });
                 if (!res.ok) {
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }
@@ -18,7 +22,7 @@ export default function Testimonials() {
                     name: item.name,
                     location: item.location,
                     comment: item.description,
-                    avatar: `http://localhost:1337${item.profile?.url}`,
+                    avatar: `https://loving-compassion-bc81cd979e.strapiapp.com/${item.profile?.url}`,
                 }));
                 setTestimonial(formatted);
             } catch (error) {
