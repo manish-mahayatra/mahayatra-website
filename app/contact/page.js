@@ -59,8 +59,8 @@ export default function page(){
                             </svg>
                             <div>
                                 <h3>Address</h3>
-                                <p>123 Travel Street, Wanderlust Avenue</p>
-                                <p>Tourism City, TC 12345</p>
+                                <p>Sector-112</p>
+                                <p>Dwarka Expressway, Delhi</p>
                             </div>
                         </div>
 
@@ -70,8 +70,7 @@ export default function page(){
                             </svg>
                             <div>
                                 <h3>Email</h3>
-                                <p>info@travelwonder.com</p>
-                                <p>support@travelwonder.com</p>
+                                <p>admin@mahayatra.in</p>
                             </div>
                         </div>
 
@@ -81,8 +80,7 @@ export default function page(){
                             </svg>
                             <div>
                                 <h3>Phone</h3>
-                                <p>+1 (555) 123-4567</p>
-                                <p>+1 (555) 987-6543</p>
+                                <p>+91-9540900810</p>
                             </div>
                         </div>
                     </div>
@@ -170,7 +168,7 @@ export default function page(){
                 </div>
             </div>
 
-            <div className="map-container">
+            {/* <div className="map-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.305935303!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1645667968547!5m2!1sen!2s"
                     width="100%"
@@ -180,7 +178,7 @@ export default function page(){
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-            </div>
+            </div> */}
         </section>
     );
 }
