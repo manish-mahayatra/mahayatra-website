@@ -59,8 +59,7 @@ export default function page(){
                             </svg>
                             <div>
                                 <h3>Address</h3>
-                                <p>Sector-112</p>
-                                <p>Dwarka Expressway, Delhi</p>
+                                <p>Shop No. 956, Gali No. 3, Sadar Bazar, Gurugram, Haryana</p>
                             </div>
                         </div>
 

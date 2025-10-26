@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 // import image from "../../public/images/trending/logo-mahayatra.png"
 
 export default function Navbar() {
@@ -21,13 +22,15 @@ export default function Navbar() {
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-24">
                     <div className="flex-shrink-0 flex items-center">
-                        <Image
-                            src="/images/logo.png"
-                            width={350}
-                            height={50}
-                            alt="Logo"
-                            className=""
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/images/logo.png"
+                                width={350}
+                                height={50}
+                                alt="Logo"
+                                className=""
+                            />
+                        </Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-center space-x-4">
