@@ -69,11 +69,11 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </div>
-                            <a href="#gallery" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">Packages</a>
+                            <a href="#packages" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">Packages</a>
                             <a href="#gallery" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">Gallery</a>
-                            <a href="#contact" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">About us</a>
+                            <a href="#" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">About us</a>
                             <a href="/contact" className="text-black font-bold hover:text-blue-600 px-3 py-2 rounded-md text-xl">Contact us</a>
-                            <a href="#contact" className="text-white bg-[#FAA710] rounded-full px-4 py-2 text-xl shadow-sm shadow-gray-500">Book Now</a>
+                            {/* <a href="#contact" className="text-white bg-[#FAA710] rounded-full px-4 py-2 text-xl shadow-sm shadow-gray-500">Book Now</a> */}
                         </div>
                     </div>
                     <div className="md:hidden">

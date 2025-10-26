@@ -13,9 +13,11 @@ export default function Home() {
   return (
     <>
       <section className="h-screen " id="home">
-        <HeroSection /> 
+        <HeroSection />
       </section>
-      <Trending />
+      <section id="packages">
+        <Trending />
+      </section>
       <Monthly />
       <Weekend />
       <About />
