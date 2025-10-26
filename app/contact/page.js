@@ -81,6 +81,7 @@ export default function page(){
                             <div>
                                 <h3>Phone</h3>
                                 <p>+91-9540900810</p>
+                                <p>+91-8595931276</p>
                             </div>
                         </div>
                     </div>

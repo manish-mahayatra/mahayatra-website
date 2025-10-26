@@ -7,8 +7,6 @@ import About from "./components/HomePage/About";
 import Contact from "./components/HomePage/Contact";
 import Gallery from "./components/HomePage/Gallery";
 import Testimonial from "./components/HomePage/Testimonial";
-import Footer from "./components/Footer";
-import Adventures from "./components/HomePage/Adventures";
 import Weekend from "./components/HomePage/Weekend";
 
 export default function Home() {
@@ -23,7 +21,6 @@ export default function Home() {
       <About />
       <Gallery />
       <Testimonial />
-      <Footer />
     </>
   );
 }
