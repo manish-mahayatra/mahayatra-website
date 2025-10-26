@@ -20,8 +20,12 @@ export default function Home() {
       </section>
       <Monthly />
       <Weekend />
-      <About />
-      <Gallery />
+      <section id="about">
+        <About />
+      </section>
+      <section id="gallery">
+        <Gallery />
+      </section>
       <Testimonial />
     </>
   );
