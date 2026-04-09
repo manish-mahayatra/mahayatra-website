@@ -7,6 +7,7 @@ export default function Weekend() {
     const [destination, setDestinations] = useState([]);
     const [loading, setLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedDestination, setSelectedDestination] = useState('');
 
@@ -41,44 +42,55 @@ export default function Weekend() {
         fetchDestinations();
     }, []);
 
+    // Once data loads, start at the first card of the middle copy
+    useEffect(() => {
+        if (destination.length > 0) {
+            setCurrentIndex(destination.length);
+        }
+    }, [destination.length]);
+
+    const extendedDestinations = destination.length > 0
+        ? [...destination, ...destination, ...destination]
+        : [];
+
     const handleBookNow = (destinationName) => {
         setSelectedDestination(destinationName);
         setIsModalOpen(true);
-        // You can also trigger your common modal here
-        // For example: window.dispatchEvent(new CustomEvent('openEnquiryModal', { detail: { destination: destinationName } }));
     };
 
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => {
-            const nextIndex = prevIndex + 1;
-            if (nextIndex >= destination.length) {
-                return 0;
-            }
-            return nextIndex;
-        });
-    };
+    const nextSlide = () => setCurrentIndex(prev => prev + 1);
+    const prevSlide = () => setCurrentIndex(prev => prev - 1);
+    const goToSlide = (index) => setCurrentIndex(destination.length + index);
 
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => {
-            const nextIndex = prevIndex - 1;
-            if (nextIndex < 0) {
-                return destination.length - 1;
-            }
-            return nextIndex;
-        });
-    };
-
-    const goToSlide = (index) => {
-        setCurrentIndex(index);
+    const handleTransitionEnd = () => {
+        if (destination.length === 0) return;
+        if (currentIndex >= destination.length * 2) {
+            setIsAnimating(false);
+            setCurrentIndex(currentIndex - destination.length);
+        } else if (currentIndex < destination.length) {
+            setIsAnimating(false);
+            setCurrentIndex(currentIndex + destination.length);
+        }
     };
 
     useEffect(() => {
+        if (!isAnimating) {
+            const id = requestAnimationFrame(() => {
+                requestAnimationFrame(() => setIsAnimating(true));
+            });
+            return () => cancelAnimationFrame(id);
+        }
+    }, [isAnimating]);
+
+    useEffect(() => {
         if (destination.length === 0) return;
-        const timer = setInterval(() => {
-            nextSlide();
-        }, 4000);
+        const timer = setInterval(nextSlide, 4000);
         return () => clearInterval(timer);
     }, [destination.length, currentIndex]);
+
+    const actualIndex = destination.length > 0
+        ? ((currentIndex % destination.length) + destination.length) % destination.length
+        : 0;
 
     if (loading) {
         return (
@@ -132,12 +144,14 @@ export default function Weekend() {
                     {/* Cards Container */}
                     <div className="overflow-hidden px-2">
                         <div
-                            className="flex transition-transform duration-500 ease-out gap-6"
+                            className="flex gap-6"
                             style={{
-                                transform: `translateX(-${currentIndex * (100 / 3)}%)`
+                                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                                transition: isAnimating ? 'transform 500ms ease-out' : 'none',
                             }}
+                            onTransitionEnd={handleTransitionEnd}
                         >
-                            {destination.map((dest, index) => (
+                            {extendedDestinations.map((dest, index) => (
                                 <div
                                     key={index}
                                     className="min-w-[calc(33.333%-16px)] group"
@@ -241,7 +255,7 @@ export default function Weekend() {
                             <button
                                 key={index}
                                 onClick={() => goToSlide(index)}
-                                className={`transition-all duration-300 rounded-full ${currentIndex === index
+                                className={`transition-all duration-300 rounded-full ${actualIndex === index
                                     ? 'w-8 h-3 bg-gradient-to-r from-green-600 to-emerald-600'
                                     : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
                                     }`}
